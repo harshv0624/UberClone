@@ -13,7 +13,9 @@ import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 const LoginScreen = () => {
+  const navigation=useNavigation()
   return (
     <SafeAreaView
       style={{
@@ -88,6 +90,9 @@ const LoginScreen = () => {
             width: "100%",
             alignItems: "center",
             borderRadius: 10,
+          }}
+          onPress={()=>{
+            navigation.navigate('OtpVerify')
           }}
         >
           <Text style={{ color: "#fff", fontWeight: "500", fontSize: 18 }}>
@@ -244,6 +249,8 @@ const LoginScreen = () => {
           the number provided
         </Text>
       </View>
+
+
     </SafeAreaView>
   );
 };
