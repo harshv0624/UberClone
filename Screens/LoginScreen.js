@@ -25,7 +25,8 @@ const LoginScreen = () => {
       }}
     >
       <View style={{ marginHorizontal: 20, marginVertical: 20 }}>
-        <Text style={{ fontWeight: "500", fontSize: 22 }}>
+
+        <Text style={{ fontWeight: "300", fontSize: 22 }}>
           Enter your mobile number
         </Text>
 
@@ -51,10 +52,11 @@ const LoginScreen = () => {
           >
             <Image
               source={require("../assets/flag.jpg")}
-              style={{ width: 50, height: 50 }}
+              style={{ width: 30, height: 25,marginLeft:8 }}
             />
-            <Entypo name="triangle-down" size={20} color="black" />
+            <Entypo name="triangle-down" size={18} color="black" style={{marginRight:5}} />
           </Pressable>
+
           <Pressable
             style={{
               backgroundColor: "#eeeeee",
@@ -101,14 +103,14 @@ const LoginScreen = () => {
         </Pressable>
 
         <View
-          style={{ flexDirection: "row", marginTop: 30, alignItems: "center" }}
+          style={{ flexDirection: "row", marginTop: 25, alignItems: "center" }}
         >
           <View
-            style={{ backgroundColor: "#eeeeee", height: 5, width: "45%" }}
+            style={{ backgroundColor: "#eeeeee", height: 2, width: "45%" }}
           ></View>
           <Text
             style={{
-              fontSize: 18,
+              fontSize: 16,
               width: "10%",
               alignSelf: "center",
               textAlign: "center",
@@ -117,7 +119,7 @@ const LoginScreen = () => {
             or
           </Text>
           <View
-            style={{ backgroundColor: "#eeeeee", height: 5, width: "45%" }}
+            style={{ backgroundColor: "#eeeeee", height: 2, width: "45%" }}
           ></View>
         </View>
 
@@ -204,7 +206,7 @@ const LoginScreen = () => {
           style={{ flexDirection: "row", marginTop: 30, alignItems: "center" }}
         >
           <View
-            style={{ backgroundColor: "#eeeeee", height: 5, width: "45%" }}
+            style={{ backgroundColor: "#eeeeee", height: 2, width: "45%" }}
           ></View>
           <Text
             style={{
@@ -217,7 +219,7 @@ const LoginScreen = () => {
             or
           </Text>
           <View
-            style={{ backgroundColor: "#eeeeee", height: 5, width: "45%" }}
+            style={{ backgroundColor: "#eeeeee", height: 2, width: "45%" }}
           ></View>
         </View>
 
@@ -231,7 +233,7 @@ const LoginScreen = () => {
           }}
         >
           <Ionicons name="search" size={25} color="black" />
-          <Text style={{ fontSize: 18, fontWeight: "700" }}>
+          <Text style={{ fontSize: 18, fontWeight: "400" }}>
             Find my account
           </Text>
         </View>
@@ -240,7 +242,7 @@ const LoginScreen = () => {
           style={{
             fontSize: 13,
             color: "gray",
-            marginTop: 15,
+            marginTop: 30,
             textAlign: "justify",
           }}
         >

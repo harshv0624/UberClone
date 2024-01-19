@@ -6,18 +6,17 @@ import {
   Text,
   View,
 } from "react-native";
-import React, { useState } from "react";
 import { OtpInput } from "react-native-otp-entry";
 import { AntDesign } from "@expo/vector-icons";
 import { BottomModal, ModalContent, SlideAnimation } from "react-native-modals";
-import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { Entypo } from '@expo/vector-icons';
+import { Entypo } from "@expo/vector-icons";
+import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 const OtpVerificationScreen = () => {
-  const [modalVisible, setModalVisible] = useState(false);
   const navigation=useNavigation()
+  const [modalVisible,setModalVisible]=useState(false)
   return (
     <>
       <SafeAreaView
@@ -31,7 +30,7 @@ const OtpVerificationScreen = () => {
           <Text style={{ fontSize: 22, fontWeight: "600" }}>
             Welcome Back !
           </Text>
-          <Text style={{ fontSize: 17, marginTop: 10 }}>
+          <Text style={{ fontSize: 14, marginTop: 15 }}>
             Enter the 4-digit code sent to your number at 123456799
           </Text>
 
@@ -61,6 +60,7 @@ const OtpVerificationScreen = () => {
               focusStickStyle: styles.focusStick,
               focusedPinCodeContainerStyle: styles.activePinCodeContainer,
             }}
+            autoFocus={false}
           />
 
           <View style={{ marginTop: 40 }}>
@@ -99,7 +99,7 @@ const OtpVerificationScreen = () => {
             style={{
               position: "relative",
               backgroundColor: "#fff",
-              top: "92%",
+              top: "95%",
               flexDirection: "row",
               justifyContent: "space-between",
             }}
@@ -110,7 +110,7 @@ const OtpVerificationScreen = () => {
                 padding: 10,
                 borderRadius: 50,
               }}
-              onPress={()=>navigation.goBack()}
+              onPress={() => navigation.goBack()}
             >
               <AntDesign name="arrowleft" size={30} color="black" />
             </Pressable>
@@ -126,16 +126,18 @@ const OtpVerificationScreen = () => {
                 height: 50,
                 alignItems: "center",
               }}
+              onPress={()=>navigation.navigate('Tabs')}
             >
               <Text style={{ fontSize: 20 }}>Next</Text>
               <AntDesign
                 name="arrowright"
                 size={28}
                 color="black"
-                style={{ marginTop: 4 }}
+                style={{ marginTop: 2 }}
               />
             </Pressable>
           </View>
+
         </View>
       </SafeAreaView>
 
@@ -200,7 +202,11 @@ const OtpVerificationScreen = () => {
                   <FontAwesome5 name="whatsapp" size={26} color="black" />
                 </View>
                 <Pressable
-                  style={{ borderColor: "#eeeeee", borderBottomWidth: 2,width:'95%' }}
+                  style={{
+                    borderColor: "#eeeeee",
+                    borderBottomWidth: 2,
+                    width: "95%",
+                  }}
                 >
                   <Text
                     style={{
@@ -224,11 +230,19 @@ const OtpVerificationScreen = () => {
                 }}
               >
                 <View style={{ marginBottom: 10 }}>
-                <Entypo name="dots-three-horizontal" size={26} color="black" />
+                  <Entypo
+                    name="dots-three-horizontal"
+                    size={26}
+                    color="black"
+                  />
                 </View>
 
                 <Pressable
-                  style={{ borderColor: "#eeeeee", borderBottomWidth: 2,width:'95%' }}
+                  style={{
+                    borderColor: "#eeeeee",
+                    borderBottomWidth: 2,
+                    width: "95%",
+                  }}
                 >
                   <Text
                     style={{
@@ -242,7 +256,6 @@ const OtpVerificationScreen = () => {
                 </Pressable>
                 {/* <MaterialIcons name="phone-iphone" size={24} color="black" /> */}
               </View>
-
             </View>
           </View>
         </ModalContent>
